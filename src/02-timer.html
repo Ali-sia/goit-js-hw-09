@@ -6,6 +6,36 @@
     <title>Countdown timer</title>
     <link rel="stylesheet" href="css/common.css" />
   </head>
+  <style>
+    .timer {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .field {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      margin-right: 15px;
+      margin-top: 15px;
+      width: 50px;
+    }
+    .value {
+      font-size: 30px;
+    }
+    span[data-days] {
+      color: '#FFF933';
+    }
+    span[data-hours] {
+      color: '#55FF33';
+    }
+    span[data-minutes] {
+      color: '#33FFC5';
+    }
+    span[data-seconds] {
+      color: '#FF335D';
+    }
+  </style>
   <body>
     <p><a href="index.html">Go back</a></p>
 
