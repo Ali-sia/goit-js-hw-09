@@ -1,6 +1,7 @@
 import flatpickr from 'flatpickr';
 import 'flatpickr/dist/flatpickr.min.css';
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
+// import { Notify } from 'notiflix/build/notiflix-notify-aio';
+import { Report } from 'notiflix/build/notiflix-report-aio';
 
 const refs = {
   startBtn: document.querySelector('[data-start]'),
@@ -38,7 +39,8 @@ class Timer {
       if (deltaTime <= 0) {
         this.stop();
         // window.alert('Time is over!');
-        Notify.success('Time is over!');
+        // Notify.success('Time is over!');
+        Report.success('Success', 'Time is over!', 'Okay');
         return;
       }
     });
@@ -63,8 +65,9 @@ const options = {
       refs.startBtn.disabled = false;
       userDate = selectedDates[0];
     } else {
-      // window.alert('Please choose a date in the future');
-      Notify.failure('Please choose a date in the future');
+      // window.alert('Please, choose a date in the future');
+      // Notify.failure('Please, choose a date in the future');
+      Report.failure('Failure', 'Please, choose a date in the future', 'Okay');
     }
   },
 };
